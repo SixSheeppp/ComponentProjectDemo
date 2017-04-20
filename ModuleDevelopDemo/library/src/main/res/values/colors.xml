@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <!-- 主色调 绿 -->
+    <color name="normal_green_kkl">#7ece22</color>
+    <color name="light_green_kkl">#e5f6d0</color>
+    <color name="home_background_kkl">#f2f2f6</color>
+    <color name="divide_background_kkl">#eeeeee</color>
+    <color name="credit_card_font_kkl">#f3a12f</color>
+
+    <!-- 字体 分割线等 黑 白 -->
+    <color name="font_black">#333</color>
+    <color name="font_dark_gray">#666</color>
+    <color name="font_light_gray">#999</color>
+    <color name="font_green">#7bd024</color>
+    <color name="font_white">#fff</color>
+    <color name="divider_kkl">#dcdcdc</color>
+    <color name="bg_main">#e7efed</color>
+    <color name="bg_light_gray">#f9f9f9</color>
+    <color name="gold_font_gray">#f1ffe1</color>
+    <color name="gold_divider">#84d627</color>
+    <color name="hint">#bbbbbb</color>
+    <color name="gold_cursor">#79c325</color>
+    <color name="persontax_font">#4c8806</color>
+    <color name="combo_loan_font">#d3f5ac</color>
+    <color name="crad_details_blue">#4773b9</color>
+
+    <!-- 辅色调 蓝 黄 红 -->
+    <color name="creditcard_blue">#5c95ed</color>
+    <color name="new_blue">#4674b8</color>
+    <color name="dark_green_kkl">#54a710</color>
+    <color name="light_blue">#31a9e5</color>
+    <color name="pearl_blue">#cfd8e1</color>
+    <color name="normal_red_kkl">#ff805e</color>
+    <color name="font_red">#ff805c</color>
+    <color name="normal_yellow">#ffd761</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="light_gray">#999</color>
+    <color name="dark_gray">#666</color>
+    <color name="black">#333</color>
+    <color name="light_yellow">#f4f9ee</color>
+    <color name="font_hint_gray">#ccc</color>
+    <color name="new_divider">#f3f3f3</color>
+    <color name="mortgage_font">#fff09d</color>
+    <color name="pink">#f2f2f2</color>
+    <color name="login_ll">#f2f6ed</color>
+    <color name="register_ll">#f2f6ed</color>
+    <!-- 其他 -->
+
+    <color name="font_hint_light_gray">#c7c7c7</color>
+    <color name="home_font_gray">#1f80b0</color>
+    <color name="white_30t">#4cffffff</color>
+    <color name="white_50t">#7fffffff</color>
+    <color name="font_dark_gray_2">#5f9f15</color>
+    <color name="normal_green_1">#84d329</color>
+    <color name="dark_green_1">#67a81b</color>
+    <color name="half_transparent">#b2000000</color>
+    <color name="black_30t">#4c000000</color>
+    <color name="light_blue_1">#50bbff</color>
+    <color name="light_blue_2">#81d8ff</color>
+    <color name="dot_line">#445157</color>
+    <color name="circular_red">#f43030</color>
+    <color name="f43280">#f43280</color>
+    <color name="bg_black">#000000</color>
+    <color name="dot_gray">#e0dfdf</color>
+    <color name="dot_white">#f4f4f4</color>
+    <color name="ship_gray">#b2b2b2</color>
+    <color name="bg_msgcount">#ff6666</color>
+    <color name="orange">#ffb624</color>
+    <color name="dark_orange">#fec552</color>
+    <color name="experience_font">#fef5db</color>
+    <color name="font_unit_gray">#b6e7ff</color>
+    <color name="font_date">#75caff</color>
+    <color name="font_gray_66">#666666</color>
+    <color name="font_gray_99">#999999</color>
+    <color name="font_light_red">#ff6623</color>
+    <color name="light_red">#FC8080</color>
+    <color name="banner_dot">#F1F1F1</color>
+    <color name="login_tv_green">#8ccc4a</color>
+    <color name="register_tv_green">#5fb301</color>
+    <color name="calculate_titlebar">#7ece22</color>
+    <color name="home_background_f5f5f5">#f5f5f5</color>
+    <color name="accu_details_gray">#c0ea90</color>
+    <color name="accu_font_red">#f19149</color>
+    <color name="accu_blue">#60b513</color>
+    <color name="credit_blue_font">#5e95ec</color>
+    <color name="credit_center_font">#bbed84</color>
+    <color name="introduce_button_click">#5c8c26</color>
+
+
+    <color name="btn_register_getcode">#84c938</color>
+    <color name="btn_register_getcode_click">#6bb911</color>
+    <color name="division_color">#e1e1e1</color>
+    <color name="green_74">#74bd1f</color>
+    <color name="green_68">#68aa1d</color>
+    <color name="green_56">#568f15</color>
+    <color name="green_49">#497812</color>
+    <color name="green_3f">#3f6711</color>
+    <color name="gray_d9d9d9">#d9d9d9</color>
+    <color name="orange_fe9e49">#fe9e49</color>
+    <color name="orange_fead3b">#fead3b</color>
+
+    <color name="creditcard_manage_bg_color">#c2c2c2</color>
+
+
+    <color name="gray_cacaca">#cacaca</color>
+    <color name="gray_a4a4a4">#a4a4a4</color>
+    <color name="gray_3333">#333333</color>
+    <color name="green_6bbc0d">#6bbc0d</color>
+    <color name="green_93dd3e">#93dd3e</color>
+
+    <color name="gray_dddddd">#dddddd</color>
+    <color name="gray_f0f0f0">#f0f0f0</color>
+    <color name="gray_c8c8c8">#c8c8c8</color>
+
+
+
+    <!--kkcredit-->
+
+    <!-- 主色调 绿 -->
+    <color name="normal_green">#7ece22</color>
+    <color name="dark_green">#6bb911</color>
+    <color name="light_green">#e5f6d0</color>
+
+    <!-- 辅色调 蓝 黄 红 -->
+    <color name="normal_blue">#53c6ff</color>
+    <color name="dark_blue">#40bcf9</color>
+    <color name="normal_red">#ff805e</color>
+    <color name="mine_blue">#90DAFE</color>
+    <!-- 字体 分割线等 黑 白 -->
+    <color name="divider">#e9e9e9</color>
+
+    <!-- 其他 -->
+    <color name="home_background">#e7efed</color>
+    <color name="new_home_background">#e7fffc</color>
+    <color name="green_edfdda">#edfdda</color>
+    <color name="gray_d5d5d5">#d5d5d5</color>
+    <color name="black_transparent">#7f000000</color>
+    <color name="blue_68bdff">#68bdff</color>
+    <color name="green_99ddd4">#99ddd4</color>
+    <color name="green_66b125">#66b125</color>
+    <color name="orange_fbb77e">#fbb77e</color>
+    <color name="blue_659ecf">#659ecf</color>
+    <color name="blue_45aeff">#45aeff</color>
+    <color name="orange_fffae4">#fffae4</color>
+    <color name="orange_f79832">#f79832</color>
+    <color name="orange_ffb05e">#ffb05e</color>
+    <color name="gray_f2feff">#f2feff</color>
+    <color name="blue_44b5e9">#44b5e9</color>
+    <color name="gray_bbbbbb">#bbbbbb</color>
+    <color name="gray_aaaaaa">#aaaaaa</color>
+    <color name="gray_e9efee">#e9efee</color>
+    <color name="orange_fffaa2">#fffaa2</color>
+    <color name="ffd566">#ffd566</color>
+    <color name="ff7979">#ff7979</color>
+    <color name="cc79ff">#cc79ff</color>
+    <color name="ffc179">#ffc179</color>
+    <color name="color_79c0ff">#79c0ff</color>
+    <color name="ff79ef">#ff79ef</color>
+    <color name="home_ffab00">#ffab00</color>
+    <color name="home_2dd271">#2dd271</color>
+    <color name="home_ff6000">#ff6000</color>
+    <color name="home_2c9fff">#2c9fff</color>
+    <color name="home_67ce7b">#32d17c</color>
+    <!--贷款超市-->
+    <color name="supermarket_green">#67ce7b</color>
+    <color name="supermarket_black_main">#333333</color>
+    <color name="supermarket_gray">#999999</color>
+
+</resources>
