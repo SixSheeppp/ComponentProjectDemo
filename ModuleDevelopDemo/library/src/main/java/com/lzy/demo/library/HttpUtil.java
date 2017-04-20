@@ -282,40 +282,13 @@ public class HttpUtil {
     }
 
     public String getMainUrl(String str) {
-        StringBuffer stringBuffer = new StringBuffer(ConfigNet.MAIN_HOST);
-        stringBuffer.append(str);
-        return stringBuffer.toString();
+//        StringBuffer stringBuffer = new StringBuffer(ConfigNet.MAIN_HOST);
+//        stringBuffer.append(str);
+//        return stringBuffer.toString();
+        return  "";
     }
 
-    public String getCommonUrl(String str) {
-        StringBuffer stringBuffer = new StringBuffer(ConfigNet.MAIN_HOST);
-        stringBuffer.append(str);
-        return stringBuffer.toString();
-    }
 
-    public String getKKCreditUrl(String str) {
-        StringBuffer stringBuffer = new StringBuffer(ConfigNet.KKCreditCheck_HOST);
-        stringBuffer.append(str);
-        return stringBuffer.toString();
-    }
-
-    public String getMainUrl_SQ(String str) {
-        StringBuffer stringBuffer = new StringBuffer(ConfigNet.MAIN_HOST_sq);
-        stringBuffer.append(str);
-        return stringBuffer.toString();
-    }
-
-    public String getFuYouUrl_SQ(String str) {
-        StringBuffer stringBuffer = new StringBuffer(ConfigNet.FUYOURODER);
-        stringBuffer.append(str);
-        return stringBuffer.toString();
-    }
-
-    public String getDiscount(String str) {
-        StringBuffer stringBuffer = new StringBuffer(ConfigNet.KKLIFEDISCOUNT);
-        stringBuffer.append(str);
-        return stringBuffer.toString();
-    }
 
   /*      //卡卡贷的mainhost
     public String getKKCreditMainHost(String str){

@@ -37,12 +37,5 @@ public class AppConfig {
     public static  boolean cancelNetFlag = false;
 
 
-    /*／
-    * 卡卡贷访问私钥
-    *
-    * */
-    public static final String KKCREDITPRIVATEKEY = "MIIBVgIBADANBgkqhkiG9w0BAQEFAASCAUAwggE8AgEAAkEAk100nlv/WlrTkKmNdBwURQWneGofoIQoV77TLOVhffSRDNDjsNm6fmgQJeM7RNcITwv+NLAh+jVv0XxWIvt2xwIDAQABAkEAh/470OiVfozTMW1HXR+MlSXipv1IsplDobY4q/YDQnhC92EnCSLhLvxVNMghfNp9ztfR6htiFf9397MnvGPEAQIhAOxenwgEdWAf8SfnuTY8Ff6UydRlFL9zxL4OKZx653G/AiEAn5pEJoiXX7YcaLZRv2RVyM7BWPB3CGCkpeF7OiHvLPkCIBAIFuc3TjK31+Zp/BDmoGNE+i9yr6aQlo6BbWcUmvAHAiEAkwCY4tEOc9adpgi/lMRKixF8XnnleS7il/Lt+CZHUKkCIQChqk9biDo5qAiqZDNh4DgAhQ/0XeFLe/MxgDPTnFWwzQ==";
-
-
 
 }
