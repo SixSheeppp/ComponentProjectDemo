@@ -34,9 +34,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -692,47 +690,6 @@ public class CommonUtils {
 
 
 
-
-    /*
-    * 首页  根据id来获取银行的名字
-    * */
-
-
-    public static String getBankNameFromId(Integer id) {
-        Map<Integer, String> map = new HashMap<>();
-        map.put(0, "中国银行");
-        map.put(1, "华夏银行");
-        map.put(2, "兴业银行");
-        map.put(3, "花旗银行");
-        map.put(4, "民生银行");
-        map.put(5, "北京银行");
-        map.put(6, "光大银行");
-        map.put(7, "工商银行");
-        map.put(8, "招商银行");
-        map.put(9, "交通银行");
-        map.put(10, "浦发银行");
-        map.put(11, "宁波银行");
-        map.put(12, "中信银行");
-        map.put(13, "建设银行");
-        map.put(14, "上海银行");
-        map.put(15, "农业银行");
-        map.put(16, "平安银行");
-        map.put(17, "广发银行");
-        map.put(18, "上海农商银行");
-        map.put(19, "渣打银行");
-        map.put(20, "江苏银行");
-        map.put(21, "成都银行");
-        map.put(22, "河北银行");
-        map.put(23, "杭州银行");
-        map.put(24, "杭州联合银行");
-        map.put(25, "南京银行");
-        map.put(26, "浙江泰隆商业银行");
-        map.put(27, "邮储银行");
-        map.put(28, "福建农信");
-
-
-        return map.get(id);
-    }
 
 
 }
