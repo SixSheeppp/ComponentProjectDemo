@@ -34,7 +34,10 @@ public class RetrofitUtil {
             .writeTimeout(20, TimeUnit.SECONDS).build();
 
 
+
+    //get请求
     public void doGet(String url, Map<String, String> map, final CallRequestListener listener) {
+        //这边的baseurl必需已／结尾，不然retrofit会抛错
         Retrofit build = new Retrofit.Builder().
                 baseUrl(url + "/").addConverterFactory(StringConverterFactory.create()).client(client).build();
         InterfaceManager interfaceManageService = build.create(InterfaceManager.class);
@@ -52,6 +55,7 @@ public class RetrofitUtil {
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
+                //这边返回的数据可以在包裹一层
                 if (t instanceof TimeoutException) {
                     Toast.makeText(mContext, "请求超时，请稍后", Toast.LENGTH_SHORT).show();
                 } else {
@@ -59,6 +63,12 @@ public class RetrofitUtil {
                 }
             }
         });
+    }
+
+    //post请求
+    public void doPost(String url, Map<String, String> map, final CallRequestListener listener){
+        
+
     }
 
     //取消所有的网络访问请求

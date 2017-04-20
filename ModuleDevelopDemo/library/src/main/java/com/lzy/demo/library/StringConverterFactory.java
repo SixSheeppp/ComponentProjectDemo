@@ -10,7 +10,7 @@ import retrofit2.Retrofit;
 
 /**
  * Created by LZY on 2017/4/20.
- * ＊ Description ${TODO}
+ * ＊ Description 将返回的数据用string的形式返回，方便后面自己去用jsonutil解析
  */
 
 public class StringConverterFactory extends  Converter.Factory  {

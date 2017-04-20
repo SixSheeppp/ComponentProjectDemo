@@ -12,7 +12,7 @@ import retrofit2.Converter;
 
 /**
  * Created by LZY on 2017/4/20.
- * ＊ Description ${TODO}
+ * ＊ Description 请求体的转换
  */
 
 public class StringRequestBodyConverter  implements Converter<String, RequestBody> {
