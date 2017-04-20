@@ -1,7 +1,7 @@
 package com.lzy.demo.library;
 
 import android.content.Context;
-import android.util.Log;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -15,7 +15,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by LZY on 2016/10/31.
@@ -35,48 +34,41 @@ public class RetrofitUtil {
             .writeTimeout(20, TimeUnit.SECONDS).build();
 
 
-    public void doGet(String url, Map<String,String> map, final CallRequestListener listener){
+    public void doGet(String url, Map<String, String> map, final CallRequestListener listener) {
         Retrofit build = new Retrofit.Builder().
-                baseUrl(url).addConverterFactory(GsonConverterFactory.create()).client(client).build();
+                baseUrl(url + "/").addConverterFactory(StringConverterFactory.create()).client(client).build();
         InterfaceManager interfaceManageService = build.create(InterfaceManager.class);
-
-        Log.d("LZY", "doGet: "+url);
-        Call<String> stringCall = interfaceManageService.get(url+"／", map);
-
+        Call<String> stringCall = interfaceManageService.get(url, map);
         list.add(stringCall);
         stringCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                listener.success(response.message());
+                String message = response.message();
+                // 如果说返回的message是ok的话就回调给页面
+                if (TextUtils.equals("OK", response.message())) {
+                    listener.success(response.body());
+                }
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                if (t instanceof TimeoutException){
+                if (t instanceof TimeoutException) {
                     Toast.makeText(mContext, "请求超时，请稍后", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     listener.error(t);
                 }
             }
         });
-
-
     }
 
-
     //取消所有的网络访问请求
-    private void cancelAllRequest(){
-        for (Call request:list){
-            if (!request.isCanceled()){
+    public  void cancelAllRequest() {
+        for (Call request : list) {
+            if (!request.isCanceled()) {
                 request.cancel();
             }
         }
-
-
-
     }
-
-
 
 
 }

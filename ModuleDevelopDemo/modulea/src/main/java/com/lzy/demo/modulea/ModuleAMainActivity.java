@@ -12,25 +12,34 @@ import java.util.Map;
 
 public class ModuleAMainActivity extends AppCompatActivity {
 
+    private RetrofitUtil mUtil;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.modulea_activity_main);
 
-        RetrofitUtil util= new RetrofitUtil(this);
-        Map<String,String>  map= new HashMap<>();
-        map.put("key","5437f942f2b037cf64deb8d501418bb7");
-        util.doGet("http://op.juhe.cn/onebox/exchange/query", map, new CallRequestListener() {
+        mUtil = new RetrofitUtil(this);
+        Map<String, String> map = new HashMap<>();
+        map.put("key", "5437f942f2b037cf64deb8d501418bb7");
+        mUtil.doGet("http://op.juhe.cn/onebox/exchange/query", map, new CallRequestListener() {
             @Override
             public void success(String result) {
-                Log.d("LZY", "success: "+result);
+                Log.d("LZY", "success: " + result);
             }
 
             @Override
             public void error(Throwable error) {
-                Log.d("LZY", "error: "+error.toString());
+                Log.d("LZY", "error: " + error.toString());
             }
         });
 
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mUtil.cancelAllRequest();
     }
 }
