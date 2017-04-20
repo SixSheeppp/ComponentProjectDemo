@@ -29,5 +29,5 @@ dependencies {
     if (!IsBuildMudle.toBoolean()) {
         compile project(':modulea')
     }
-    compile project(':library')
+
 }
