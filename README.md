@@ -3,5 +3,8 @@
 
 # 2017.4.20 
 整体架构基本搭建，第一层为MainActivity,后续将改造成壳，第二层为ModuleA层，第三层为Library层（volly和基本工具类）
+结束之前，完成了retrofit get请求的封装，请求的数据为聚合数据的汇率
+
+
 
 
