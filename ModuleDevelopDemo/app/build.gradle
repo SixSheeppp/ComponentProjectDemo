@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //事实证明，如果说想要使用databinding，不同的module都需要加上这个属性，并不能抽取到library中
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {

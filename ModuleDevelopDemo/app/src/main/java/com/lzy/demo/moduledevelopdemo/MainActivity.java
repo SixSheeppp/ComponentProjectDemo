@@ -1,43 +1,59 @@
 package com.lzy.demo.moduledevelopdemo;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
 
 import com.lzy.demo.modulea.ModuleAMainActivity;
+import com.lzy.demo.moduledevelopdemo.databinding.ActivityMainBinding;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
+public class MainActivity extends Activity {
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    @Bind(R.id.main_bt)
-    Button mMainBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        mMainBt.setOnClickListener(this);
+        //这边的ActivityMainBinding 必需要自己强写   名字规则参考布局文件的名字，并不会自动生成
+        final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+
+        //这边是绑定用户user
+        final User user = new User("", "");
+        binding.setUser(user);
+
+
+        //可以参考布局中实时修改对象里的参数 @{}和@={}的区别
+        binding.et.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                binding.tvFirstname.setText(user.lastName);
+            }
+        });
+
+
+        //这边binding就直接能拿到对象了，可以直接对他做点击事件，不建议单独写个类出来
+        binding.mainBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ModuleAMainActivity.class));
+            }
+        });
 
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ButterKnife.unbind(this);
-    }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.main_bt:
-                startActivity(new Intent(this,ModuleAMainActivity.class));
-
-                break;
-        }
-    }
 }

@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
-    tools:context="com.lzy.demo.moduledevelopdemo.MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-   <Button
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/main_bt"/>
-</RelativeLayout>
+    <data>
+        <variable
+            name="user"
+            type="com.lzy.demo.moduledevelopdemo.User"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!--这边的点击事件可以单独抽取一个类来写，但个人感觉没啥必要-->
+        <Button
+            android:id="@+id/main_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <!--这边直接就绑定了对象里的数据了，也可以使用id来控制数据-->
+        <TextView
+            android:id="@+id/tv_firstname"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000"
+            android:text="@{user.firstName}"
+            android:textColor="#fff"/>
+
+        <EditText
+            android:id="@+id/et"
+            android:text="@={user.lastName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</layout>
