@@ -1,31 +1,52 @@
 package com.lzy.demo.modulea;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.lzy.demo.library.CallRequestListener;
 import com.lzy.demo.library.RetrofitUtil;
+import com.lzy.demo.library.base.BaseActivity;
+import com.lzy.demo.modulea.databinding.ModuleaActivityMainBinding;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ModuleAMainActivity extends AppCompatActivity {
+public class ModuleAMainActivity extends BaseActivity {
 
-    private RetrofitUtil mUtil;
+    private RetrofitUtil mRetrofitUtil;
+    private ModuleaActivityMainBinding mMainActivity;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.modulea_activity_main);
+//        setContentView(R.layout.modulea_activity_main);
+        mMainActivity = DataBindingUtil.setContentView(this, R.layout.modulea_activity_main);
+        init();
 
-        mUtil = new RetrofitUtil(this);
+    }
+
+    @Override
+    public void instantiation() {
+        mRetrofitUtil = new RetrofitUtil(this);
+
+    }
+
+    @Override
+    public void eventbind() {
+
+    }
+
+    @Override
+    public void databind() {
         Map<String, String> map = new HashMap<>();
         map.put("key", "5437f942f2b037cf64deb8d501418bb7");
-        mUtil.doGet("http://op.juhe.cn/onebox/exchange/query", map, new CallRequestListener() {
+        mRetrofitUtil.doGet("http://op.juhe.cn/onebox/exchange/query", map, new CallRequestListener() {
             @Override
             public void success(String result) {
                 Log.d("LZY", "success: " + result);
+                mMainActivity.activityMain.setVisibility(View.GONE);
             }
 
             @Override
@@ -33,13 +54,12 @@ public class ModuleAMainActivity extends AppCompatActivity {
                 Log.d("LZY", "error: " + error.toString());
             }
         });
-
     }
-
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mUtil.cancelAllRequest();
+        mRetrofitUtil.cancelAllRequest();
+
     }
 }

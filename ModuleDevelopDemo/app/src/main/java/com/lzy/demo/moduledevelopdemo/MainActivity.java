@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //这边的ActivityMainBinding 必需要自己强写   名字规则参考布局文件的名字，并不会自动生成
-        final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        final ActivityMainBinding binding =  DataBindingUtil.setContentView(this, R.layout.activity_main);
 
 
         //这边是绑定用户user
