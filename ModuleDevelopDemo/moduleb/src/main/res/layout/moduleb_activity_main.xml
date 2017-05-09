@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+        <variable
+            name="userinfo"
+            type="com.lzy.demo.moduleb.UserInfo"></variable>
+
+    </data>
+
+
 <RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
 
@@ -8,14 +16,58 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lzy.demo.moduleb.ModuleBMainActivity">
 
     <EditText
-
+        android:id="@+id/et_moduleb"
+        android:text="@={userinfo.username}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
+
+
+    <Button
+        android:id="@+id/moduleb_bt_takephoto"
+        android:text="takephoto"
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/moduleb_bt_savedata"
+        android:text="save"
+        android:layout_marginTop="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:text="getdata"
+        android:id="@+id/moduleb_bt_getdata"
+        android:layout_marginTop="350dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/moduleb_iv"
+        android:layout_alignParentRight="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <TextView
+        android:text="@{userinfo.username}"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/moduleb_tv"
+        android:textColor="#fff"
+        android:background="#000"
+        android:layout_below="@+id/moduleb_iv"
+       android:layout_marginRight="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 </RelativeLayout>
 </layout>
