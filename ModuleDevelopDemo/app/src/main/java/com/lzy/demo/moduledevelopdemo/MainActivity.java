@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.view.View;
 
 import com.lzy.demo.modulea.ModuleAMainActivity;
+import com.lzy.demo.moduleb.ModuleBMainActivity;
 import com.lzy.demo.moduledevelopdemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends Activity {
@@ -52,6 +53,16 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, ModuleAMainActivity.class));
             }
         });
+
+        binding.mainBt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ModuleBMainActivity.class));
+            }
+        });
+
+
+
 
     }
 

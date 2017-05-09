@@ -16,7 +16,15 @@
 
         <!--这边的点击事件可以单独抽取一个类来写，但个人感觉没啥必要-->
         <Button
+            android:text="支付宝moduleA"
             android:id="@+id/main_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:text="ACache moduleB"
+            android:id="@+id/main_bt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />

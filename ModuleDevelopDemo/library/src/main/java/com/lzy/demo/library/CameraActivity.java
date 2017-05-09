@@ -139,6 +139,7 @@ public class CameraActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
         int id = view.getId();
+        //这边的library里面的R.id是不固定的，只能通过if else来判断
         if (id == R.id.camera_img_takepicture) {
             // 拍照
             if (IS_TOOK == 0) {
