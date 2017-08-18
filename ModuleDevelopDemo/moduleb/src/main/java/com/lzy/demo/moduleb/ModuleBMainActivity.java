@@ -44,6 +44,7 @@ public class ModuleBMainActivity extends BaseActivity {
             mInfo = info;
         }
         mModulebBinding = DataBindingUtil.setContentView(this, R.layout.moduleb_activity_main);
+
         mModulebBinding.setUserinfo(mInfo);
         //这边用来测试双向绑定
         mModulebBinding.etModuleb.addTextChangedListener(new TextWatcher() {
